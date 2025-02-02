@@ -1,0 +1,22 @@
+{
+    "es": {
+    "menu": "MENU",
+    "inicio": "Inicio",
+    "estudios": "Estudios",
+    "caracteristicas": "Caracteristicas",
+    "inicio_footer": "Para contactar conmigo puede hacerlo mediante el siguiente correo",
+    "texto_footer": "O desde mi numero de telefono",
+    "fin_footer": "O alguna de mis redes sociales indicadas en el menu",
+    "descarga": "archivos/Curriculum.pdf"
+  },
+  "en": {
+    "menu": "MENU",
+    "inicio": "Home",
+    "estudios": "Studies",
+    "caracteristicas": "Features",
+    "inicio_footer": "To contact me, you can do so through the following email",
+    "texto_footer": "Or through my phone number",
+    "fin_footer": "Or through any of my social media listed in the menu",
+    "descarga": "archivos/CVIngles.pdf"
+  }
+}

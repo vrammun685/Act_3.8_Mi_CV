@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI CV</title>
+    <link rel="stylesheet" href="estudiStyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <nav>
+            <span id="boton"><i class='bx bx-menu'></i></span>
+            <div class="cambia_idioma">
+                <span class="es">ES</span>
+                <input type="checkbox" name="check" id="check">
+                <span class="en">EN</span>
+            </div>
+        </nav>
+        <aside id="aside">
+            <div class="container">
+                <h2>MENU</h2>
+                <div>
+                    <a href="index.html" data-translate="inicio">Inicio</a>
+                </div>
+                <div>
+                    <a href="estudios.html" data-translate="estudios">Estudios</a>
+                </div>
+                <div>
+                    <a href="caracteristicas.html" data-translate="caracteristicas">Caracteristicas</a>
+                </div>
+                <div>
+                    <a href="https://github.com/vrammun685" data-translate="github">Github</a>
+                </div>
+                <div>
+                    <a href="https://www.linkedin.com/in/victor-ramirez-munoz-b41914334/" data-translate="linkedin">Linkdl</a>
+                </div>
+                <div>
+                    <a href="experiencias.html" data-translate="twitter">Twiter</a>
+                </div>
+                <div>
+                    <a href="experiencias.html" data-translate="instagram">Instagram</a>
+                </div>
+            </div>
+        </aside>
+    </header>
+    <main>
+        <div id="contenido">
+            <button name="botonAtras" onclick="pasaratras()">
+                <div class="atras">
+                    <img id="atras" src="imagenes/atras.png" alt="atras" loading="lazy">
+                </div>
+            </button>
+                <div id="carrutexto">
+                    <h3 id="titulillo"name="titulillo">Secundaria</h3>
+                    <a href="https://www.jesuitinas-sevilla.es/" id="textillo"name="textillo">Juan Nepomuceno Rojas</a>
+                </div>
+            <button  name="botonAdelante" onclick="pasarAdelante()"> 
+                <div class="adelante" id="adelante">
+                    <img id="adelante" src="imagenes/adelante.png" alt="adelante" loading="lazy">
+                </div>
+            </button>
+        </div>
+    </main>
+    <footer>
+        <p data-translate="inicio_footer">Para contactar conmigo puede hacerlo mediante el siguiente correo</p>
+        <h3>micorreo@gmail.com</h3>
+        <p data-translate="texto_footer">O desde mi numero de telefono</p>
+        <h3>635780875</h3>
+        <p data-translate="fin_footer">O alguna de mis redes sociales indicadas en el menu</p>
+    </footer>
+    <script src="javaScript.js"></script>
+</body>
+</html>
+<!--video para el menu lateral https://www.youtube.com/watch?v=W72XJJUlMmE&t=232s-->
+<!--video para ponerlo todo en ingles -->
