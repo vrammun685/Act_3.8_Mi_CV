@@ -4,9 +4,8 @@
     "inicio": "Inicio",
     "estudios": "Estudios",
     "caracteristicas": "Caracteristicas",
-    "inicio_footer": "Para contactar conmigo puede hacerlo mediante el siguiente correo",
-    "texto_footer": "O desde mi numero de telefono",
-    "fin_footer": "O alguna de mis redes sociales indicadas en el menu",
+    "inicio_footer": "Correo: victtorramirezz1@gmail.com",
+    "fin_footer": "Numero de telefono: 645551889",
     "descarga": "archivos/Curriculum.pdf"
   },
   "en": {
@@ -14,9 +13,8 @@
     "inicio": "Home",
     "estudios": "Studies",
     "caracteristicas": "Features",
-    "inicio_footer": "To contact me, you can do so through the following email",
-    "texto_footer": "Or through my phone number",
-    "fin_footer": "Or through any of my social media listed in the menu",
+    "inicio_footer": "Email: victtorramirezz1@gmail.com",
+    "fin_footer": "Number: 645551889",
     "descarga": "archivos/CVIngles.pdf"
   }
 }

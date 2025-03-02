@@ -23,9 +23,8 @@ nav{
     align-items: center;
     width: 100%;
     padding: 10px 30px;
-    background-color: rgb(10, 134, 93);
+    background-color: #2C666E;
     position: fixed;
-    /*border-bottom: 1px solid red;*/
 }
 nav img{
     margin-left: 20px;
@@ -35,16 +34,17 @@ nav span i{
     font-size: 5rem;
     cursor: pointer;
 }
+
 aside{
-    background-color: rgb(10, 134, 93);
+    background-color: #2C666E;
     width: 260px;
-    height: 100%;
+    height: 92.7%;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     overflow-y: hidden;
-    margin-top: 59px;
+    margin-top: 3.5%; /*Ajustar altura del aside*/
     transition: 0.5s;
     transform: translateX(-100%);
 }
@@ -55,6 +55,7 @@ aside:hover{
     transform: translateX(0%);
 }
 .container{
+    margin-top: 10%;
     padding: 10px 1px;
 }
 .container div{
@@ -74,28 +75,16 @@ aside:hover{
     font-size: 1.5rem;
     font-weight: 500;
 }
-h2{
-    padding: 10px 20px;
-    color: #333;
-}
 
+.menu_h2{
+    padding: 10px 20px;
+    color: #309e95;
+}
+.curriculum_descarga{
+    margin-top: 2.5%;
+}
 a{
     color: white;
-}
-
-main{
-    min-height: 70%;
-    text-align: center;
-}
-
-footer{
-    text-align: center;
-    color: white;
-}
-
-.redonda{
-    border-radius: 50%; /* Hace que sea un círculo */
-    object-fit: cover; 
 }
 
 .cambia_idioma{
@@ -146,3 +135,130 @@ footer{
     transform: translateX(25px);
     border: 2px solid #81e9e0;
 }
+
+footer{
+    text-align: center;
+    color: white;
+    background-color: #2C666E;
+    padding: 1%;
+    font-size: 200%;
+}
+
+/*Index*/
+.main_index{
+    min-height: 70.5%;
+    text-align: center;
+}
+.redonda{
+    border-radius: 50%; /* Hace que sea un círculo */
+    object-fit: cover; 
+}
+/*Index*/
+
+/*Estudios*/
+.main_estudios{
+    min-height: 70.5%;
+    text-align: center;
+}
+
+#contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    overflow: hidden;
+}
+
+/* Carrusel de texto */
+#carrutexto {
+    min-width: 800px;
+    min-height: 500px;
+    padding: 20px;
+    backdrop-filter: blur(20px);
+    background-image: url(imagenes/nepo.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateY(0px);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Evita expansión por padding */
+}
+
+/* Título en carrutexto */
+#carrutexto h3 {
+    
+    font-size: 45px;
+}
+
+#carrutexto a {
+    margin-bottom: 0%;
+    font-size: 25px;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+}
+#iconos {
+    display: flex; /* Utiliza Flexbox para alinear elementos en fila */
+    justify-content: center; /* Centra horizontalmente los íconos */
+    width: 10%; /* Ancho del contenedor */
+    padding: 2px; /* Menos espacio interno alrededor del contenido */
+    /*position: absolute; /* Hace que el contenedor de íconos esté en una posición fija */
+    bottom: 3px; /* Lo fija a 20px del fondo de la pantalla */
+    background-color: white;
+    margin-left: 46%;
+    border-radius: 15px;
+}
+/*Estudios*/
+
+/*Caracteristicas*/
+.main_caracteristicas{
+    min-height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
+    gap: 15px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.cuadro {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s;
+    
+}
+
+.cuadro img {
+    width: 47%;
+    height: 190px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.cuadro p {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.cuadro:hover {
+    transform: scale(1.05);
+    background: #6c7e67d2;
+    color: white;
+}
+/*Caracteristicas*/
