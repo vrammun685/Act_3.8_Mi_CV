@@ -9,85 +9,88 @@ botonMenu.addEventListener("click", ()=>{
 
 
 /*Carrusel*/
-let titulo1 = "Secundaria";
-let texto1 = "Juan Nepomuceno Rojas";
-let imagen1 = "imagenes/nepo.webp";
-let url1 = "https://www.jesuitinas-sevilla.es/"
 
-let titulo2 = "Bachillerato";
-let texto2 = "IES Martinez Montañez";
-let imagen2 = "imagenes/martinez.jpg"
-let url2 = "https://iesmartinezm.es/"
+const datosCarrusel = {
+    "secundaria": {
+        id: "2",
+        titulo: { es: "Secundaria", en: "Secondary school" },
+        texto: { es: "Juan Nepomuceno Rojas", en: "Juan Nepomuceno Rojas" },
+        imagen: "imagenes/nepo.webp",
+        url: "https://www.jesuitinas-sevilla.es/"
+    },
+    "bachillerato": {
+        id: "1",
+        titulo: { es: "Bachillerato", en: "Baccalaureate" },
+        texto: { es: "IES Martinez Montañez", en: "Martinez Montañez Institute" },
+        imagen: "imagenes/martinez.jpg",
+        url: "https://iesmartinezm.es/"
+    },
+    "grado_superior": {
+        id: "0",
+        titulo: { es: "Grado Superior", en: "Higher Technical Degree" },
+        texto: { es: "IES Hermanos Machado", en: "Hermanos Machado Institute" },
+        imagen: "imagenes/centro.jpeg",
+        url: "https://ieshnosmachado.org/"
+    }
+};
 
-let titulo3 = "Grado Superior";
-let texto3 = "IES Hermanos Machado";
-let imagen3 = "imagenes/centro.jpeg";
-let url3 = "https://ieshnosmachado.org/";
+
 
 function pasaratras() {
-    let tituloActivo = document.querySelector("#titulillo").textContent;
+    const titulo_carrusel = document.getElementById("titulo_carrusel");
+    const texto_carrusel = document.getElementById("texto_carrusel");
+    const div = document.getElementById("carrutexto");
+    const savedLanguage = localStorage.getItem('idioma') || 'es';
 
-    let tituloSalida, textoSalida, imagenSalida, urlSalida;
-
-    if (tituloActivo === titulo1) {
-        tituloSalida = titulo3;
-        textoSalida = texto3;
-        imagenSalida = imagen3;
-        urlSalida = url3;
-
-    } else if (tituloActivo === titulo2) {
-        tituloSalida = titulo1;
-        textoSalida = texto1;
-        imagenSalida = imagen1;
-        urlSalida = url1;
-
-    } else if (tituloActivo === titulo3) {
-        tituloSalida = titulo2;
-        textoSalida = texto2;
-        imagenSalida = imagen2;
-        urlSalida = url2;
+    let claveCarrusel;
+    switch (parseInt(titulo_carrusel.getAttribute('data-id'))){
+        case 0:
+            claveCarrusel = 'secundaria'; 
+            titulo_carrusel.setAttribute('data-id',2)
+            break;
+        case 1:
+            claveCarrusel = 'grado_superior';
+            titulo_carrusel.setAttribute('data-id',0)
+            break;
+        case 2:
+            claveCarrusel = 'bachillerato';
+            titulo_carrusel.setAttribute('data-id',1)
+            break;
     }
 
-    document.getElementById("titulillo").innerHTML = tituloSalida;
-    document.getElementById("textillo").innerHTML = textoSalida;
-    
-    let div = document.getElementById("carrutexto");
-    div.style.backgroundImage = `url('${imagenSalida}')`;
-    document.getElementById("textillo").href = urlSalida;
+    titulo_carrusel.textContent = datosCarrusel[claveCarrusel].titulo[savedLanguage];
+    texto_carrusel.textContent = datosCarrusel[claveCarrusel].texto[savedLanguage];
+    texto_carrusel.href = datosCarrusel[claveCarrusel].url;
+    div.style.backgroundImage = `url('${datosCarrusel[claveCarrusel].imagen}')`;
 }
 
 
 function pasarAdelante() {
-    let tituloActivo = document.querySelector("#titulillo").textContent;
+    const titulo_carrusel = document.getElementById("titulo_carrusel");
+    const texto_carrusel = document.getElementById("texto_carrusel");
+    const div = document.getElementById("carrutexto");
+    const savedLanguage = localStorage.getItem('idioma') || 'es';
 
-    let tituloSalida, textoSalida, imagenSalida, urlSalida;
-
-    if (tituloActivo === titulo1) {
-        tituloSalida = titulo2;
-        textoSalida = texto2;
-        imagenSalida = imagen2;
-        urlSalida = url2;
-
-    } else if (tituloActivo === titulo2) {
-        tituloSalida = titulo3;
-        textoSalida = texto3;
-        imagenSalida = imagen3;
-        urlSalida = url3;
-
-    } else if (tituloActivo === titulo3) {
-        tituloSalida = titulo1;
-        textoSalida = texto1;
-        imagenSalida = imagen1;
-        urlSalida = url1;
+    let claveCarrusel;
+    switch (parseInt(titulo_carrusel.getAttribute('data-id'))){
+        case 0:
+            claveCarrusel = 'bachillerato'; 
+            titulo_carrusel.setAttribute('data-id',1)
+            break;
+        case 1:
+            claveCarrusel = 'secundaria';
+            titulo_carrusel.setAttribute('data-id',2)
+            break;
+        case 2:
+            claveCarrusel = 'grado_superior';
+            titulo_carrusel.setAttribute('data-id',0)
+            break;
     }
 
-    document.getElementById("titulillo").innerHTML = tituloSalida;
-    document.getElementById("textillo").innerHTML = textoSalida;
-    
-    let div = document.getElementById("carrutexto");
-    div.style.backgroundImage = `url('${imagenSalida}')`;
-    document.getElementById("textillo").href = urlSalida;
-    
+    titulo_carrusel.textContent = datosCarrusel[claveCarrusel].titulo[savedLanguage];
+    texto_carrusel.textContent = datosCarrusel[claveCarrusel].texto[savedLanguage];
+    texto_carrusel.href = datosCarrusel[claveCarrusel].url;
+    div.style.backgroundImage = `url('${datosCarrusel[claveCarrusel].imagen}')`;
 }
 /*Carrusel*/
 
@@ -105,16 +108,52 @@ cambia.addEventListener('change', (event)=>{
 
 function cambiaIngles() {
     console.log('Idioma cambiado a inglés');
+    cambiaCV('en');
+    cambiaCarrusel('en');
     cargaIdioma('en');
     localStorage.setItem('idioma', 'en');
 }
 
 function cambiaEspañol() {
     console.log('Idioma cambiado a español');
+    cambiaCV('es');
+    cambiaCarrusel('es');
     cargaIdioma('es');
     localStorage.setItem('idioma', 'es');
 }
+function cambiaCV(idioma){
+    const botondescarga = document.getElementById('descarga');
+    if(botondescarga){
+        if(idioma == 'es'){
+            botondescarga.href = 'archivos/Curriculum.pdf';
+        }
+        else{
+            botondescarga.href = 'archivos/CVIngles.pdf';
+        }
+    }
+}
 
+function cambiaCarrusel(idioma){
+    const div = document.getElementById("carrutexto");
+    if(div){
+        const titulo_carrusel = document.getElementById("titulo_carrusel");
+        const texto_carrusel = document.getElementById("texto_carrusel");
+
+        switch (parseInt(titulo_carrusel.getAttribute('data-id'))){
+            case 0:
+                claveCarrusel = 'grado_superior'; 
+                break;
+            case 1:
+                claveCarrusel = 'bachillerato';
+                break;
+            case 2:
+                claveCarrusel = 'secundaria';
+                break;
+        }
+        titulo_carrusel.textContent = datosCarrusel[claveCarrusel].titulo[idioma];
+        texto_carrusel.textContent = datosCarrusel[claveCarrusel].texto[idioma];
+    }
+}
 function cargaIdioma(idioma) {
     fetch('idioma.json') 
         .then(response => response.json())
@@ -126,13 +165,6 @@ function cargaIdioma(idioma) {
                     element.textContent = data[idioma][key];  
                 }
             });
-            // Cambiar el objeto a descargar
-            const language = localStorage.getItem('idioma') || 'es';
-            const downloadLink = document.getElementById('descarga');
-
-            if (data[idioma] && data[idioma].descarga) {
-                downloadLink.href = data[idioma].descarga;
-            }
         })
         .catch(error => {
             console.error("Error al cargar las traducciones:", error);
@@ -141,6 +173,8 @@ function cargaIdioma(idioma) {
 
 document.addEventListener('DOMContentLoaded', function() {
     const savedLanguage = localStorage.getItem('idioma') || 'es';
+    cambiaCV(savedLanguage);
+    cambiaCarrusel(savedLanguage);
     cargaIdioma(savedLanguage);
     document.getElementById('check').checked = (savedLanguage === 'en');
 });

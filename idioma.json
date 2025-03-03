@@ -6,7 +6,8 @@
     "caracteristicas": "Caracteristicas",
     "inicio_footer": "Correo: victtorramirezz1@gmail.com",
     "fin_footer": "Numero de telefono: 645551889",
-    "descarga": "archivos/Curriculum.pdf"
+    "puesto":"Desarrollador Web",
+    "descarga_texto":"Descargue mi Curriculum pulsando la foto"
   },
   "en": {
     "menu": "MENU",
@@ -15,6 +16,7 @@
     "caracteristicas": "Features",
     "inicio_footer": "Email: victtorramirezz1@gmail.com",
     "fin_footer": "Number: 645551889",
-    "descarga": "archivos/CVIngles.pdf"
+    "puesto":"Web Developer",
+    "descarga_texto":"Download my CV by clicking the photo."
   }
 }
