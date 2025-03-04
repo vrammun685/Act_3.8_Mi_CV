@@ -6,7 +6,7 @@
     font-family: "Lexend Giga", serif;
 }
 header{
-    min-height: 20%;
+    height: 10%;
 }
 body{
     width: 100%;
@@ -19,12 +19,12 @@ html{
     font-size: 62.5%;
 }
 nav{
+    position: fixed;
     display: flex;
     align-items: center;
     width: 100%;
     padding: 10px 30px;
     background-color: #2C666E;
-    position: fixed;
 }
 nav img{
     margin-left: 20px;
@@ -36,10 +36,10 @@ nav span i{
 }
 
 aside{
+    position: fixed;
     background-color: #2C666E;
     width: 260px;
     height: 92.7%;
-    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
@@ -47,6 +47,7 @@ aside{
     margin-top: 3.5%; /*Ajustar altura del aside*/
     transition: 0.5s;
     transform: translateX(-100%);
+
 }
 aside:hover{
     overflow-y: auto;
@@ -137,16 +138,19 @@ a{
 }
 
 footer{
+    position: fixed;
     text-align: center;
     color: white;
     background-color: #2C666E;
     padding: 1%;
     font-size: 200%;
+    width: 100%;
+    height: 19.5%;
 }
 
 /*Index*/
 .main_index{
-    min-height: 70.5%;
+    min-height: 80.5%;
     text-align: center;
 }
 .redonda{
@@ -157,7 +161,7 @@ footer{
 
 /*Estudios*/
 .main_estudios{
-    min-height: 70.5%;
+    min-height: 80.5%;
     text-align: center;
 }
 
@@ -219,54 +223,83 @@ button{
 
 /*Caracteristicas*/
 .main_caracteristicas{
-    min-height: 70%;
+    height: 80.5%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     padding: 20px;
+    flex-direction: column; /* Apila los divs uno encima de otro */
+    gap: 20px; /* Espacio entre los divs */
+}
+.programacion, .idioma, .experiencia {
+    width: 100%; /* Hace que cada div ocupe todo el ancho disponible */
+    padding: 3%;
+    display: flex;
+    justify-content: space-between; /* Para separar el título y la flecha */
+    align-items: center; /* Alinea los elementos verticalmente */
+    flex-direction: column;
 }
 
-.contenedor {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas por fila */
-    gap: 15px;
-    width: 90%;
-    max-width: 900px;
-}
-
-.cuadro {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, background 0.3s;
+.cabeza{
+    display: flex;
+    justify-content: space-between; /* Para separar el título y la flecha */
+    align-items: center; /* Alinea los elementos verticalmente */
+    flex-direction: column;
     
 }
-
-.cuadro img {
-    width: 47%;
-    height: 190px;
-    object-fit: cover;
-    margin-top: 10px;
+.oculto {
+    display: none; /* Oculta el elemento */
 }
 
-.cuadro p {
-    padding: 10px;
-    font-size: 16px;
+.flecha {
+    width: 5em; /* Ajusta el tamaño de la flecha */
+    height: auto;
+    transform: rotate(90deg);
+
+}
+.programacion .cuerpo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    padding: 20px;
 }
 
-.cuadro:hover {
-    transform: scale(1.05);
-    background: #6c7e67d2;
-    color: white;
+.cuerpo{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
-/*Caracteristicas*/
 
-/*Proyectos*/
-.main_produyectos{
-    min-height: 70.5%;
+/* Estilos de cada tarjeta */
+.tarjeta {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/*Proyectos*/
+/* Imagen dentro de la tarjeta */
+.tarjeta img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Nombre del lenguaje/tecnología */
+.tarjeta h2 {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Efecto hover */
+.tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/*Caracteristicas*/

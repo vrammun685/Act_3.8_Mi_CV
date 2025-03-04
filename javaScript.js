@@ -1,3 +1,15 @@
+/*Al iniciar*/
+document.addEventListener('DOMContentLoaded', function() {
+    const savedLanguage = localStorage.getItem('idioma') || 'es';
+    cambiaCV(savedLanguage);
+    cambiaCarrusel(savedLanguage);
+    cargaIdioma(savedLanguage);
+    estilosCaracteristica();
+    document.getElementById('check').checked = (savedLanguage === 'en');
+});
+/*Al iniciar*/
+
+
 /*Sacar y esconder menu*/ 
 const botonMenu = document.getElementById("boton"),
         aside = document.getElementById("aside");
@@ -171,12 +183,81 @@ function cargaIdioma(idioma) {
         });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const savedLanguage = localStorage.getItem('idioma') || 'es';
-    cambiaCV(savedLanguage);
-    cambiaCarrusel(savedLanguage);
-    cargaIdioma(savedLanguage);
-    document.getElementById('check').checked = (savedLanguage === 'en');
-});
 
 /*Cambiar Idioma*/
+
+/*Caracteristicas*/
+const programacion = document.querySelector('.programacion');
+const experiencia = document.querySelector('.experiencia');
+const idioma = document.querySelector('.idioma');
+
+const checkbox_programacion = document.getElementById('checkbox_programacion');
+const flecha_programacion= document.getElementById('flecha_programacion');
+
+flecha_programacion.addEventListener('click', function() {
+    checkbox_programacion.checked = !checkbox_programacion.checked
+    const contenedorCuerpo = document.querySelector('.programacion .contenedor_cuerpo');
+
+    if (checkbox_programacion.checked) {
+        flecha_programacion.style.transform= 'rotate(-90deg)';
+        contenedorCuerpo.style.display="";
+        idioma.classList.add('oculto');
+        experiencia.classList.add('oculto');    
+    } else {
+        flecha_programacion.style.transform= 'rotate(90deg)';
+        contenedorCuerpo.style.display="none";
+        idioma.classList.remove('oculto');
+        experiencia.classList.remove('oculto');
+    }
+});
+
+const checkbox_idioma = document.getElementById('checkbox_idioma');
+const flecha_idioma= document.getElementById('flecha_idioma');
+
+flecha_idioma.addEventListener('click', function() {
+    checkbox_idioma.checked = !checkbox_idioma.checked
+    
+    const contenedorCuerpo = document.querySelector('.idioma .contenedor_cuerpo');
+
+    if (checkbox_idioma.checked) {
+        flecha_idioma.style.transform= 'rotate(-90deg)';
+        contenedorCuerpo.style.display="";
+        programacion.classList.add('oculto');
+        experiencia.classList.add('oculto');    
+    } else {
+        flecha_idioma.style.transform= 'rotate(90deg)';
+        contenedorCuerpo.style.display="none";
+        programacion.classList.remove('oculto');
+        experiencia.classList.remove('oculto');
+    }
+});
+
+const checkbox_experiencia = document.getElementById('checkbox_experiencia');
+const flecha_experiencia= document.getElementById('flecha_experiencia');
+
+flecha_experiencia.addEventListener('click', function() {
+    checkbox_experiencia.checked = !checkbox_experiencia.checked
+    
+    const contenedorCuerpo = document.querySelector('.experiencia .contenedor_cuerpo');
+
+    if (checkbox_experiencia.checked) {
+        flecha_experiencia.style.transform= 'rotate(-90deg)';
+        contenedorCuerpo.style.display="";
+        programacion.classList.add('oculto');
+        idioma.classList.add('oculto');    
+    } else {
+        flecha_experiencia.style.transform= 'rotate(90deg)';
+        contenedorCuerpo.style.display="none";
+        programacion.classList.remove('oculto');
+        idioma.classList.remove('oculto');
+    }
+});
+function estilosCaracteristica(){
+    const cuerpos = document.querySelectorAll(".contenedor_cuerpo");
+    if(cuerpos){
+        cuerpos.forEach(cuerpo => {
+            cuerpo.style.display='none';
+        })
+    }
+}
+/*Caracteristicas*/

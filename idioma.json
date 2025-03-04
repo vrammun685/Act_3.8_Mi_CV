@@ -7,7 +7,14 @@
     "inicio_footer": "Correo: victtorramirezz1@gmail.com",
     "fin_footer": "Numero de telefono: 645551889",
     "puesto":"Desarrollador Web",
-    "descarga_texto":"Descargue mi Curriculum pulsando la foto"
+    "descarga_texto":"Descargue mi Curriculum pulsando la foto",
+    "Habilidades":"Habilidades",
+    "Idiomas":"Idioma",
+    "Experiencia":"Experiencia",
+    "ingle":"Ingles B1",
+    "españo":"Español Nativo",
+    "alfardo":"2024-actualidad",
+    "romero":"diciembre-2023"
   },
   "en": {
     "menu": "MENU",
@@ -17,6 +24,13 @@
     "inicio_footer": "Email: victtorramirezz1@gmail.com",
     "fin_footer": "Number: 645551889",
     "puesto":"Web Developer",
-    "descarga_texto":"Download my CV by clicking the photo."
+    "descarga_texto":"Download my CV by clicking the photo.",
+    "Habilidades":"Skills",
+    "Idiomas":"Lenguage",
+    "Experiencia":"Experience",
+    "ingle": "English B1",
+    "españo": "Native Spanish",
+    "alfardo": "2024-present",
+    "romero": "December-2023"
   }
 }
